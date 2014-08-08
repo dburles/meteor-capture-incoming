@@ -1,0 +1,23 @@
+<head>
+  <title>incoming</title>
+</head>
+
+<body>
+  {{> feed}}
+</body>
+
+<template name="feed">
+  {{#if incoming.count}}
+    <p>{{incoming.count}} new! <a class="new">Show</a></p>
+  {{/if}}
+
+  <ul>
+    {{#each feed}}
+      {{> feedItem}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="feedItem">
+  <li><strong>{{name}}</strong>: {{message}}</li>
+</template>

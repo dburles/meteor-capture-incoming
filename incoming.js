@@ -21,7 +21,7 @@ if (Meteor.isClient) {
   });
 }
 
-Feed = new Meteor.Collection('feed');
+Feed = new Mongo.Collection('feed');
 
 Factory.define('feed', Feed, {
   createdAt: function() { return new Date(); },
